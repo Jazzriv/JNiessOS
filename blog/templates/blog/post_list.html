@@ -1,22 +1,13 @@
-<html>
-	<head>
-		<title>Jean-Loup Niess</title>
-	</head>
+{% extends 'blog/base.html' %}
 
-
-    <body>
-     <div>
-   		<h1><a href="/">Blog de Jean-Loup Niess</a></h1>
-	</div>
-	{% autoescape off %}
+{% block content %}
 	{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|escape|linebreaks }}</p>
-    </div>
-	 {% endfor %}
-	 {% endautoescape %}
-    </body>
-
-</html>
+	    <div class="post">
+	        <div class="date">
+	            {{ post.published_date }}
+	        </div>
+	        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+	        <p>{{ post.text|linebreaksbr }}</p>
+	    </div>
+	{% endfor %}
+{% endblock %}
