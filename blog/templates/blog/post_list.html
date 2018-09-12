@@ -8,14 +8,15 @@
      <div>
    		<h1><a href="/">Blog de Jean-Loup Niess</a></h1>
 	</div>
-
+	{% autoescape off %}
 	{% for post in posts %}
     <div>
         <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.text|escape|linebreaks }}</p>
     </div>
 	 {% endfor %}
+	 {% endautoescape %}
     </body>
 
 </html>
