@@ -1,26 +1,69 @@
+
 {% load static %}
+{% load staticfiles %}
 <html>
 	<head>
 		<title>Jean-Loup Niess</title>
-		<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <script src="{% static 'scripts/clock.js' %}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{% static 'scripts/scanlines.js' %}"></script>
+        
 	</head>
 
 
-    <body>
-    <div class="page-header">
-        <h1><a href="/">Blog de Jean-Loup Niess</a></h1>
-    </div>
-    <div><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
+    <body >
+
+        <div>
+            <div class = "header_container">
+                <div class="page-header">
+                    <span class = "header_left">
+                        <button class = "header_button"><div w3-dropdown-click>Start</div><div><img src="{%static 'img/arrow_down.png'%}">
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </button>
+                        <button class = "header_button">Resume</button>
+                        <button class = "header_button">Games & projects</button>
+                        <button class = "header_button">Contact</button>
+                    </span>
+                    <span class = "header_right">
+                        <span class = "myName">Jean-Loup Niess-Nachez</span>
+                        <button class = "lang_button">EN</button>
+                        <span id="clock">  
+                           <!-- 
+                            <ul>
+                                <li id="hours"></li>
+                                <li id="point">:</li>
+                                <li id="min"></li>
+                                <li id="point">:</li>
+                                <li id="sec"></li>
+                            </ul>
+                        -->
+                        </span>
+                    </span>
+                </div>
             </div>
-        </div>
+            <div class="content_container crt">
+                <div class = "inbound_page">
+                    <div class= "top_bar">
+                        <span class = "window_title"><h1>Titre</h1></span>
+                        <span class = "close_button"><button>X</button></span>
+                    </div>
+                    <div class = "window_content">
+                    {% block content %}
+                    {% endblock %}
+                    </div>
+                </div>
+            </div>
+        <footer>
+            <a href = "https://www.flaticon.com/packs/cursors-and-pointers">cursors by Freepik from Flaticon</a>
+        </footer>
     </div>
 </body>
 

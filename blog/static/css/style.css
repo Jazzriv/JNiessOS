@@ -1,0 +1,272 @@
+@import "compass/css3"
+@font-face {
+    font-family: Streamster;
+    src: url("../fonts/Streamster.ttf");
+    }
+@font-face{
+    font-family: VCR_OSD_MONO_1;
+    src: url('../fonts/VCR_OSD_MONO_1.001.ttf');
+}
+@font-face {
+    font-family: Linebeam;
+    src: url("../fonts/jd_digital.ttf");
+    }
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-image: linear-gradient(to bottom, #662D91,#00BFFF);
+    margin : 0;
+    height : 100%;
+    box-shadow: 10px, 10px, black,inset;
+    cursor: url("../cursors/pointer.cur"), url("../cursors/pointer.png"), default;
+}
+
+h1{
+    line-height: 1px;
+}
+
+footer{
+    position:absolute;
+   bottom:0;
+   width:100%;
+}
+
+.header_container{
+    background-color: black;
+}
+
+.page-header {
+    font-family: Linebeam;
+    background-color: white;
+    height: 85px;
+    display: block;
+    clear:both;
+    border-bottom : 1px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: -150px, 500px,black;
+}
+
+.page-header .header_left{
+    padding-left: 20px;
+    float : left;
+
+}
+
+.page-header .header_right{
+    color : black;
+    font-size: 2em;
+    position: absolute; /*or fixed*/
+    right: 0px;
+    margin-top : 26px;
+}
+
+.myName{ 
+    font-weight: bold;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    position: relative;
+    display: inline-block;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.header_button{
+    font-family: Linebeam;
+    height : 85px;
+    color : black;
+    font-size: 2em;
+    background-color : rgba(255,255,255,0);
+    padding-right: 25px;
+    border : none;
+    text-align : center;
+}
+
+.content_container{
+    
+}
+
+.inbound_page{
+    
+    background-color:rgba(255,255,255,0.6);
+    width : 65%;
+    height : 80%;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    -webkit-transform:translate(-50%,-45%);
+    transform:translate(-50%,-45%);
+    padding-top :20px;
+    border-style : solid;
+    border-width: 1px;
+    border-right-width: 4px;
+    border-bottom-width: 2.5px;
+    border-bottom-color: darkslategray;
+    border-right-color: darkslategray;
+
+}
+
+.top_bar{
+    font-family: Linebeam;
+    position: fixed;
+    top : 0;
+    max-height: 35px;
+    width : 100%;
+    background-color: white;
+    color :black;
+    text-align: center;
+    
+    border-style : solid;
+    border-width: 1px;
+    border-left : none;
+    border-right : none;
+    border-top : none;
+}
+
+.close_button{
+    background-color: none;
+    float : right;
+    padding-right: 5px;
+}
+
+.window_content{
+    overflow-y: auto;
+    height : 96%;
+    padding-top: 10px;
+    margin: 10px;
+    margin-right : 0px;
+}
+
+/*=__SCROLLBAR__=*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 20px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    width: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+@keyframes flicker {
+  0% {
+  opacity: 0.27861;
+  }
+  5% {
+  opacity: 0.34769;
+  }
+  10% {
+  opacity: 0.23604;
+  }
+  15% {
+  opacity: 0.70626;
+  }
+  20% {
+  opacity: 0.18128;
+  }
+  25% {
+  opacity: 0.73891;
+  }
+  30% {
+  opacity: 0.55583;
+  }
+  35% {
+  opacity: 0.67807;
+  }
+  40% {
+  opacity: 0.26559;
+  }
+  45% {
+  opacity: 0.74693;
+  }
+  50% {
+  opacity: 0.86019;
+  }
+  55% {
+  opacity: 0.08594;
+  }
+  60% {
+  opacity: 0.20313;
+  }
+  65% {
+  opacity: 0.71988;
+  }
+  70% {
+  opacity: 0.53455;
+  }
+  75% {
+  opacity: 0.37288;
+  }
+  80% {
+  opacity: 0.71428;
+  }
+  85% {
+  opacity: 0.70419;
+  }
+  90% {
+  opacity: 0.7003;
+  }
+  95% {
+  opacity: 0.36108;
+  }
+  100% {
+  opacity: 0.24387;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
