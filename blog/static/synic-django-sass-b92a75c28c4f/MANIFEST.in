@@ -1,5 +1,0 @@
-include AUTHORS
-include README.rst
-include CHANGES.rst
-include LICENSE
-recursive-include sass/tests/media *.scss
